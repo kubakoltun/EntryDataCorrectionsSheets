@@ -61,10 +61,7 @@ Sub export_preparation_assigning_category()
     ActiveCell.FormulaR1C1 = "G"
     Range("K2").Select
     ActiveCell.FormulaR1C1 = "H"
-    
-    'Range("Q1").Select
-    'ActiveCell.FormulaR1C1 = "I"
-    
+ 
     Range("L2").Select
     ActiveCell.FormulaR1C1 = "J"
     Range("M2").Select
@@ -77,7 +74,7 @@ Sub export_preparation_assigning_category()
     For Each i In Range("H2:H" & lRk).Cells
         If InStr(i.Value, "Vale1") > 0 Then
             'i.Offset(0, 1).Value = "Certain Value1"
-            Range("M" & Var).Value = "Certain Value2" 'range O
+            Range("M" & Var).Value = "Certain Value2" 
         Else
             'i.Offset(0, 1).Value = "Vale2"
             Range("M" & Var).Value = "Certain Value2"
@@ -195,7 +192,7 @@ Sub export_preparation_assigning_category()
     Columns("I:I").Select
     Selection.NumberFormat = "yyyy-mm-dd;@"
     
-    'dodanie pola branzy =
+    'dodanie pola branzy 
     Columns("E:E").Select
     Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
     Range("E1").Select
@@ -356,12 +353,7 @@ Sub export_preparation_assigning_category()
     'closing workbooks
     ActiveWorkbook.Close SaveChanges:=True
     Workbooks("import obecnych gości.xlsx").Close SaveChanges:=True
-'    Workbooks("obecni_przygotowanie_eksportu.xlsx").Close SaveChanges:=True 'out of range
-    
-   ' Dim wb As Workbook
-   ' For Each wb In Workbooks
-   '     wb.Close SaveChanges:=True
-   ' Next wb
+'   Workbooks("obecni_przygotowanie_eksportu.xlsx").Close SaveChanges:=True 'out of range
     
     Workbooks("obecni_makro.xlsm").Close SaveChanges:=True
     
