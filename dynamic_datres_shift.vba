@@ -1,10 +1,7 @@
 Sub obrobienie_pol_dla_aktualizacji()
 '
 ' spojnosc_pol Makro
-' zgodnie z aktualizacja bazy Członków BNI Polska 2022-12-21
-' pola sa dostosowane trzeba sprawdzic i dograc kopiowanie do pliku importowego
-'
-
+' 
 '
     Windows("hs_kopiaDanych_czlonkowie.xlsx").Activate
     
@@ -202,19 +199,19 @@ Sub obrobienie_pol_dla_aktualizacji()
     Selection.Delete Shift:=xlToLeft
     Range("G1").Select
     Range("A1").Select
-    ActiveCell.FormulaR1C1 = "Nazwisko"
+    ActiveCell.FormulaR1C1 = "A"
     Range("B1").Select
-    ActiveCell.FormulaR1C1 = "Imię"
+    ActiveCell.FormulaR1C1 = "B"
     Range("C1").Select
-    ActiveCell.FormulaR1C1 = "Nazwa firmy"
+    ActiveCell.FormulaR1C1 = "C"
     Range("D1").Select
-    ActiveCell.FormulaR1C1 = "City"
+    ActiveCell.FormulaR1C1 = "D"
     Range("F1").Select
-    ActiveCell.FormulaR1C1 = "Specjalizacja branży"
+    ActiveCell.FormulaR1C1 = "E"
     Range("G1").Select
-    ActiveCell.FormulaR1C1 = "Data dołączenia do BNI"
+    ActiveCell.FormulaR1C1 = "F"
     Range("H1").Select
-    ActiveCell.FormulaR1C1 = "Data zakończenia Członkostwa BNI"
+    ActiveCell.FormulaR1C1 = "G"
     Columns("I:I").Select
     Selection.Delete Shift:=xlToLeft
     Range("I2209").Select
@@ -222,9 +219,9 @@ Sub obrobienie_pol_dla_aktualizacji()
     Range("I2207").Select
     Selection.End(xlUp).Select
     Range("I1").Select
-    ActiveCell.FormulaR1C1 = "Nazwa grupy BNI, do której należy Członek"
+    ActiveCell.FormulaR1C1 = "H"
     Range("J1").Select
-    ActiveCell.FormulaR1C1 = "Region BNI, do którego należy Członek"
+    ActiveCell.FormulaR1C1 = "I"
     Columns("K:K").Select
     Selection.Delete Shift:=xlToLeft
     Columns("L:L").Select
@@ -236,11 +233,11 @@ Sub obrobienie_pol_dla_aktualizacji()
     Columns("L:L").Select
     Selection.Delete Shift:=xlToLeft
     Range("K1").Select
-    ActiveCell.FormulaR1C1 = "numer telefonu"
+    ActiveCell.FormulaR1C1 = "J"
     Range("L1").Select
-    ActiveCell.FormulaR1C1 = "email"
+    ActiveCell.FormulaR1C1 = "K"
     Range("M1").Select
-    ActiveCell.FormulaR1C1 = "website URL"
+    ActiveCell.FormulaR1C1 = "L"
     Columns("N:N").Select
     Selection.Delete Shift:=xlToLeft
     Columns("O:O").Select
@@ -265,7 +262,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Rodzaj kontaktu"
+    ActiveCell.FormulaR1C1 = "M"
     Range("P1").Select
     With Selection
         .HorizontalAlignment = xlLeft
@@ -278,7 +275,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Etap procesu sprzedaży"
+    ActiveCell.FormulaR1C1 = "N"
     Range("Q1").Select
     With Selection
         .HorizontalAlignment = xlLeft
@@ -291,7 +288,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Członek BNI?"
+    ActiveCell.FormulaR1C1 = "O"
     Range("R1").Select
     With Selection
         .HorizontalAlignment = xlLeft
@@ -304,7 +301,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Skrót regionu"
+    ActiveCell.FormulaR1C1 = "P"
     Range("S1").Select
     With Selection
         .HorizontalAlignment = xlLeft
@@ -317,7 +314,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Dyrektor odpowiedzialny za członka"
+    ActiveCell.FormulaR1C1 = "R"
     Range("T1").Select
     With Selection
         .HorizontalAlignment = xlLeft
@@ -330,7 +327,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Czy wystawiamy PF do przedłużenia? (90 dni)"
+    ActiveCell.FormulaR1C1 = "S"
     Range("T2").Select
     ActiveCell.FormulaR1C1 = "Tak"
     Range("T3").Select
@@ -349,7 +346,7 @@ Sub obrobienie_pol_dla_aktualizacji()
         .ReadingOrder = xlContext
         .MergeCells = False
     End With
-    ActiveCell.FormulaR1C1 = "Członek BNI"
+    ActiveCell.FormulaR1C1 = "T"
     Range("O2").Select
     
     Set lastRprzygotowaniehs = Cells(Rows.Count, "A").End(xlUp)
@@ -361,7 +358,7 @@ Sub obrobienie_pol_dla_aktualizacji()
     Range("O2214").Select
     Selection.End(xlUp).Select
     Range("P2").Select
-    ActiveCell.FormulaR1C1 = "Przyjęty do gupy"
+    ActiveCell.FormulaR1C1 = "U"
     'Windows("Zeszyt6").Activate
     Rows("1:1").Select
     Columns("P:P").EntireColumn.AutoFit
