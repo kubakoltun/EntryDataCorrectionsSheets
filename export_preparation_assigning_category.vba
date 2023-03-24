@@ -1,9 +1,5 @@
 Sub export_preparation_assigning_category()
-'
-' przygotowanie_danych_obecnosc Makro
-' Skrót Ctrl+k
 
-'
     Columns("G:G").Select
     Selection.Delete Shift:=xlToLeft
     Columns("G:G").Select
