@@ -2,8 +2,6 @@ Public shapeState As Boolean
 
 
 Sub Prostokat1_Click()
-'otworzenie listy po kliknieciu na wskazany ksztalt
-'wproawzdenie i odznaczenie wartosci listy
 
 Dim xSelShp As Shape, xSelLst As Variant, I, J As Integer
 Dim xV As String
@@ -65,7 +63,6 @@ Else
     xSelShp.Line.ForeColor.RGB = RGB(0, 0, 0)
     'xSelShp.AutoShapeType = msoShapeRoundedRectangle
     xSelShp.TextFrame.Characters.Font.ColorIndex = 1
-    'bezowy z excela 256, 220, 124
     xSelShp.Fill.ForeColor.RGB = RGB(8, 172, 244)
     
     If Not Intersect(curCell, Range("R:R")) Is Nothing Then
