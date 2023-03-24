@@ -1,7 +1,7 @@
 Public shapeState As Boolean
 
 Private Sub Worksheet_Change(ByVal Target As Range)
-'lista wieloelementowa z mozliwoscia usuniecia wartosci
+
 
 If Not Intersect(ActiveCell, Range("J:J")) Is Nothing Or Not Intersect(ActiveCell, Range("M:M")) Is Nothing Then
             On Error GoTo 0
@@ -10,7 +10,7 @@ If Not Intersect(ActiveCell, Range("J:J")) Is Nothing Or Not Intersect(ActiveCel
         Dim xValue2 As StringPublic shapeState As Boolean
 
 Private Sub Worksheet_Change(ByVal Target As Range)
-'lista wieloelementowa z mozliwoscia usuniecia wartosci
+
 
 If Not Intersect(ActiveCell, Range("J:J")) Is Nothing Or Not Intersect(ActiveCell, Range("M:M")) Is Nothing Then
             On Error GoTo 0
@@ -74,7 +74,6 @@ End Sub
 
 
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)
-'ksztalt wyswietlany przy kazdym kliknieciu
 
 Set curCell = ActiveCell
 
@@ -136,7 +135,6 @@ If Not Intersect(ActiveCell, Range("O:O")) Is Nothing Or Not Intersect(ActiveCel
     
     validInput = False
     'MsgBox (Worksheets("baza").Range("F2").Value)
-    'blok przypisywania podfolderow dla O:O - podfoldery
   If Not Intersect(ActiveCell, Range("O:O")) Is Nothing Then
     
                                                                                                             If InStr(curCell.Offset(0, -2), "Value1") > 0 Then 'Worksheets("baza").Range("H2").Value
@@ -566,7 +564,6 @@ End Sub
 
 
 Private Sub Worksheet_SelectionChange(ByVal Target As Range)
-'ksztalt wyswietlany przy kazdym kliknieciu
 
 Set curCell = ActiveCell
 
@@ -628,7 +625,6 @@ If Not Intersect(ActiveCell, Range("O:O")) Is Nothing Or Not Intersect(ActiveCel
     
     validInput = False
     'MsgBox (Worksheets("baza").Range("F2").Value)
-    'blok przypisywania podfolderow dla O:O - podfoldery
   If Not Intersect(ActiveCell, Range("O:O")) Is Nothing Then
     
 If InStr(curCell.Offset(0, -2), "Value1") > 0 Then 'Worksheets("baza").Range("H2").Value
